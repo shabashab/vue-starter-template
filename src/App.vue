@@ -17,5 +17,6 @@ useHead({
       deserunt similique corporis culpa enim repellendus ipsa obcaecati iusto
       vitae voluptate sed!
     </p>
+    <Button/>
   </div>
 </template>
