@@ -3,6 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import WindiCSS from "vite-plugin-windicss";
 import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
+import ViteFonts from "vite-plugin-fonts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,5 +19,10 @@ export default defineConfig({
       dts: "src/auto-import.d.ts",
       imports: ["vue", "@vueuse/head"],
     }),
+    ViteFonts({
+      google: {
+        families: ["Roboto", "Open Sans"],
+      },
+    })
   ],
 });

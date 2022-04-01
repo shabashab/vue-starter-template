@@ -9,9 +9,11 @@ export default defineConfig({
       colors: {
         grey: colors.gray,
       },
+      fontFamily: {
+        primary: ["Roboto", "sans-serif"],
+        secondary: ["Open Sans", "sans-serif"]
+      },
     },
   },
-  plugins: [
-    typography
-  ]
-})
+  plugins: [typography],
+});

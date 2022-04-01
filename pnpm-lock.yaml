@@ -8,6 +8,7 @@ specifiers:
   unplugin-auto-import: ^0.6.9
   unplugin-vue-components: ^0.18.5
   vite: ^2.9.0
+  vite-plugin-fonts: ^0.3.0
   vite-plugin-windicss: ^1.8.3
   vue: ^3.2.25
   vue-tsc: ^0.29.8
@@ -24,6 +25,7 @@ devDependencies:
   unplugin-auto-import: 0.6.9_vite@2.9.1
   unplugin-vue-components: 0.18.5_vite@2.9.1+vue@3.2.31
   vite: 2.9.1
+  vite-plugin-fonts: 0.3.0_vite@2.9.1
   vite-plugin-windicss: 1.8.3_vite@2.9.1
   vue-tsc: 0.29.8_typescript@4.6.3
   windicss: 3.5.1
@@ -1149,6 +1151,15 @@ packages:
   /upath/2.0.1:
     resolution: {integrity: sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==}
     engines: {node: '>=4'}
+    dev: true
+
+  /vite-plugin-fonts/0.3.0_vite@2.9.1:
+    resolution: {integrity: sha512-ziKf3859WraLHKO/32hzyH8GSzmzVPyIPoxU3TXAkTRMzarjVuTVABIwJXTvV99Lzhwx2GvQzxKGmPDazHeDqQ==}
+    peerDependencies:
+      vite: ^2.0.0
+    dependencies:
+      fast-glob: 3.2.11
+      vite: 2.9.1
     dev: true
 
   /vite-plugin-windicss/1.8.3_vite@2.9.1:
