@@ -17,7 +17,7 @@ export default defineConfig({
     }),
     AutoImport({
       dts: "src/auto-import.d.ts",
-      imports: ["vue", "@vueuse/head"],
+      imports: ["vue", "@vueuse/head", "@vueuse/core"],
     }),
     ViteFonts({
       google: {

@@ -1,16 +1,23 @@
 <script setup lang="ts">
+const isDark = useDark();
+const toggleDark = useToggle(isDark);
+
 useHead({
   title: "Vue Starter Template",
 });
 
 const onButtonClick = () => {
-  alert("Hello, World!");
+  toggleDark();
 };
+
+const buttonText = computed(() => {
+  return isDark.value ? "Enter light mode": "Enter dark mode";
+});
 </script>
 
 <template>
   <div
-    class="bg-gray-900 bg-transparentw-screen h-screen flex flex-col justify-center items-center text-white"
+    class="bg-white dark:bg-dark-900 w-screen h-screen flex flex-col justify-center items-center text-dark-200 dark:text-white"
   >
     <h1 class="font-bold font-primary prose-2xl">Vue Starter Template</h1>
     <p class="prose font-secondary text-center mt-10">
@@ -19,6 +26,6 @@ const onButtonClick = () => {
       deserunt similique corporis culpa enim repellendus ipsa obcaecati iusto
       vitae voluptate sed!
     </p>
-    <Button @click="onButtonClick" class="mt-5" text="Hello, world!" />
+    <Button @click="onButtonClick" class="mt-5" :text="buttonText" />
   </div>
 </template>
