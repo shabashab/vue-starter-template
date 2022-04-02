@@ -1,0 +1,7 @@
+home:
+  title: Hello, world!
+  paragraph: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet possimus reprehenderit dolore aliquid voluptates quos beatae perspiciatis rerum, deserunt similique corporis culpa enim repellendus ipsa obcaecati iusto vitae voluptate sed!
+
+buttons:
+  lightMode: Enable light mode
+  darkMode: Enable dark mode

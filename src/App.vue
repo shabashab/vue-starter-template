@@ -1,17 +1,30 @@
 <script setup lang="ts">
+
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+
+const { t, availableLocales, locale } = useI18n();
+
+const localesCycleList = useCycleList(availableLocales);
 
 useHead({
   title: "Vue Starter Template",
 });
 
-const onButtonClick = () => {
+const onThemeSwitcherButtonClick = () => {
   toggleDark();
 };
 
-const buttonText = computed(() => {
-  return isDark.value ? "Enter light mode" : "Enter dark mode";
+const themeSwitcherButtonText = computed(() => {
+  return isDark.value ? t("buttons.lightMode") : t("buttons.darkMode");
+});
+
+const onLanguageSwitcherButtonClick = () => {
+  localesCycleList.next();
+};
+
+watchEffect(() => {
+  locale.value = localesCycleList.state.value;
 });
 </script>
 
@@ -25,18 +38,20 @@ const buttonText = computed(() => {
       w:font="primary bold"
       class="prose-2xl"
     >
-      Vue Starter Template
+      {{ t("home.title") }}
     </h1>
     <p class="font-secondary mt-10 prose">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet possimus
-      reprehenderit dolore aliquid voluptates quos beatae perspiciatis rerum,
-      deserunt similique corporis culpa enim repellendus ipsa obcaecati iusto
-      vitae voluptate sed!
+      {{ t("home.paragraph") }}
     </p>
     <PageButton
       class="mt-5"
-      :text="buttonText"
-      @click="onButtonClick"
+      :text="themeSwitcherButtonText"
+      @click="onThemeSwitcherButtonClick"
+    />
+    <PageButton
+      class="mt-5"
+      :text="localesCycleList.state.value" 
+      @click="onLanguageSwitcherButtonClick"
     />
   </div>
 </template>

@@ -13,9 +13,12 @@
   "dependencies": {
     "@vueuse/core": "^8.2.3",
     "@vueuse/head": "^0.7.5",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-i18n": "9"
   },
   "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^3.3.1",
+    "@types/node": "^17.0.23",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
     "@vitejs/plugin-vue": "^2.3.0",
