@@ -7,6 +7,12 @@ const localesCycleList = useCycleList(availableLocales);
 
 useHead({
   title: "Vue Starter Template",
+  meta: [
+    {
+      name: "description",
+      content: "Website description"
+    }
+  ]
 });
 
 const onThemeSwitcherButtonClick = () => {
