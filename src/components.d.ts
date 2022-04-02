@@ -4,7 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Button: typeof import('./components/Button.vue')['default']
+    PageButton: typeof import('./components/PageButton.vue')['default']
   }
 }
 

@@ -4,6 +4,9 @@ import typography from "windicss/plugin/typography";
 
 export default defineConfig({
   darkMode: "class",
+  attributify: {
+    prefix: "w:"
+  },
   theme: {
     extend: {
       colors: {

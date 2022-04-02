@@ -17,12 +17,17 @@ const buttonText = computed(() => {
 
 <template>
   <div
-    class="bg-white dark:bg-dark-900 text-dark-200 dark:text-white w-screen h-screen flex flex-col justify-center items-center"
+    w:bg="white dark:dark-900"
+    w:text="dark-200 dark:white center"
+    class="flex flex-col h-screen w-screen justify-center items-center"
   >
-    <h1 class="font-bold font-primary prose-2xl">
+    <h1
+      w:font="primary bold"
+      class="prose-2xl"
+    >
       Vue Starter Template
     </h1>
-    <p class="prose font-secondary text-center mt-10">
+    <p class="font-secondary mt-10 prose">
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet possimus
       reprehenderit dolore aliquid voluptates quos beatae perspiciatis rerum,
       deserunt similique corporis culpa enim repellendus ipsa obcaecati iusto
