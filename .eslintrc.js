@@ -18,6 +18,8 @@ module.exports = {
     "@typescript-eslint/quotes": ["error", "double"],
     "vue/multi-word-component-names": ["error"],
     "object-curly-spacing": ["error", "always"],
-    "array-bracket-spacing": ["error", "never"]
+    "array-bracket-spacing": ["error", "never"],
+    "indent": "off",
+    "@typescript-eslint/indent": ["error", 2]
   },
 };
