@@ -17,5 +17,7 @@ module.exports = {
     "no-unused-vars": "off",
     "@typescript-eslint/quotes": ["error", "double"],
     "vue/multi-word-component-names": ["error"],
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"]
   },
 };
