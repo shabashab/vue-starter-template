@@ -1,7 +1,3 @@
-import { App } from "vue";
+import { ViteSSGContext } from "vite-ssg/single-page";
 
-export interface UserModuleContext {
-  application: App;
-}
-
-export type UserModule = (input: UserModuleContext) => void;
+export type UserModule = (input: ViteSSGContext<true>) => void;

@@ -8,6 +8,8 @@ import AutoImport from "unplugin-auto-import/vite";
 import ViteFonts from "vite-plugin-fonts";
 import VueI18n from "@intlify/vite-plugin-vue-i18n";
 
+import "vite-ssg";
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -20,7 +22,7 @@ export default defineConfig({
     }),
     AutoImport({
       dts: "src/auto-import.d.ts",
-      imports: ["vue", "@vueuse/head", "@vueuse/core", "vue-i18n"],
+      imports: ["vue", "@vueuse/head", "@vueuse/core", "vue-i18n", "vue-router"],
     }),
     ViteFonts({
       google: {
@@ -33,4 +35,8 @@ export default defineConfig({
       include: [path.resolve(__dirname, "locales/**")]
     })
   ],
+  ssgOptions: {
+    script: "async",
+    formatting: "minify",
+  }
 });
